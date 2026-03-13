@@ -575,8 +575,8 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
+  max-height: 55px;
+  margin-right: 8px;
 }
 
 .footer .footer-about .logo span {
@@ -606,12 +606,35 @@ h6 {
   transition: 0.3s;
 }
 
+
+/* Social Icons Wrapper */
+.social-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;                 
+}
+
+/* Social Icon Style */
+.social-links a i {
+  font-size: 1.4rem;         
+  color: white;              
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.social-links a:hover i {
+  color: #ff6b3d;            
+  transform: translateY(-3px);
+}
+
+
+
 .footer .social-links a:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
 }
 
-.footer h4 {
+.footer h3 {
   font-size: 16px;
   font-weight: bold;
   position: relative;
