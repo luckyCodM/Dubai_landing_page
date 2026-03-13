@@ -37,9 +37,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/CODM-01.png" alt=" codm logo">
-        <!-- <h1 class="sitename">Software</h1> -->
+        <img src="assets/img/Codm_logo.avif" alt=" CodM Software Logo">
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -76,23 +74,108 @@
 
   <main class="main">
 
-    <!-- Hero Section -->
+      <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
+      <img src="assets/img/hero-bg.avif" alt="codm background" data-aos="fade-in">
 
-      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in">
+      <div class="container py-5">
+        <div class="row align-items-center">
 
-      <div class="container d-flex flex-column align-items-center">
-        <h2 data-aos="fade-up" data-aos-delay="100">Salesforce Consulting Company In Dubai</h2>
-        <p data-aos="fade-up" data-aos-delay="200">Helping Dubai businesses implement, customize and optimize Salesforce to improve sales and customer experience.</p>
-        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="#about" class="btn-get-started">Get Started</a>
-          <a href="https://www.youtube.com/watch?v=sSYxWnBm6Vk"
-            class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch
-              Video</span></a>
+          <!-- Left Side Content -->
+          <div class="col-lg-6 text-center text-lg-start">
+            <h1 data-aos="fade-up" data-aos-delay="100">Your Trusted Salesforce Consulting Company In Dubai</h1>
+            <p data-aos="fade-up" data-aos-delay="200">
+              Helping Dubai businesses implement, customize and optimize Salesforce to improve sales and customer experience.
+            </p>
+
+            <div class="d-flex mt-4 justify-content-center justify-content-lg-start" data-aos="fade-up"
+              data-aos-delay="300">
+              <div class="social-links">
+                <a href="https://x.com/CodMSoftware" target="_blank" rel="noopener noreferrer"
+                  aria-label="Follow CodM Software on X (Twitter)">
+                  <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/company/codmsoftware/" target="_blank" rel="noopener noreferrer"
+                  aria-label="Follow CodM Software on LinkedIn">
+                  <i class="bi bi-linkedin" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://www.youtube.com/@CodMSoftware" target="_blank" rel="noopener noreferrer"
+                  aria-label="Subscribe to CodM Software on YouTube">
+                  <i class="bi bi-youtube" aria-hidden="true"></i>
+                </a>
+
+                <a href="https://in.pinterest.com/codmsoftware" target="_blank" rel="noopener noreferrer"
+                  aria-label="Follow CodM Software on Pinterest">
+                  <i class="bi bi-pinterest" aria-hidden="true"></i>
+                </a>
+
+              </div>
+              <a href="https://www.youtube.com/watch?v=sSYxWnBm6Vk"
+                class="glightbox btn-watch-video d-flex align-items-center">
+                <i class="bi bi-play-circle"></i>
+                <span>Watch Video</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Side Form (Exact same as your screenshot) -->
+          <div class="col-lg-5 offset-lg-1">
+            <div class="p-4 p-lg-5 rounded-4" style="background:#6a6a6a; margin-top: 30px;" data-aos="fade-up"
+              data-aos-delay="100">
+
+              <h2 class="text-white mb-2" data-aos="fade-up" data-aos-delay="200">Let’s Build Something Great</h2>
+
+              <form class="space-y-4" id="webToLeadForm" target="hidden_iframe"
+                action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+                <input type="hidden" name="oid" value="00D5i000008yVNX">
+                <input type="hidden" name="retURL" value="philippines.codmsoftware.com">
+                <input type="hidden" name="lead_source" value="Web">
+
+                <!-- Your Name -->
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="200">
+                  <input type="text" id="last_name" name="last_name" placeholder="Your Name" class="form-control p-3">
+                </div>
+
+                <!-- Email -->
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="300">
+                  <input type="email" id="email" name="email" placeholder="Your Email" class="form-control p-3">
+                </div>
+                <!-- Phone -->
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
+                  <input type="text" id="phone" name="phone" placeholder="Your Phone" class="form-control p-3">
+                </div>
+
+                <!-- Company -->
+                <div class="mb-3" data-aos="fade-up" data-aos-delay="500">
+                  <input type="text" id="company" name="company" placeholder="Company" class="form-control p-3">
+                </div>
+
+                <!-- Message -->
+                <div class="mb-4" data-aos="fade-up" data-aos-delay="600">
+                  <textarea class="form-control p-3" id="message" name="description" rows="3"
+                    placeholder="How can we help you?"></textarea>
+                </div>
+
+                <!-- Submit -->
+                <div class="d-flex justify-content-end" data-aos="fade-up" data-aos-delay="700">
+                  <button type="submit" class="btn px-4 py-3"
+                    style="background:#ba543a; color:#fff; font-weight:600; border-radius:10px;">
+                    Submit Now ↗
+                  </button>
+                </div>
+
+              </form>
+
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-    </section><!-- /Hero Section -->
+    <!-- End Hero Section -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -764,7 +847,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative"
               data-aos="fade-up" data-aos-delay="0">
-              <div data-aos="fade-right" data-aos-delay="500"><img class="arch-line" src="assets/img/arch-line.svg"
+              <div data-aos="fade-right" data-aos-delay="500"><img class="arch-line" src="assets/img/arch-line.avif"
                   alt="FreeBootstrap.net image placeholder"></div><span
                 class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">1</span>
               <div>
@@ -777,7 +860,7 @@
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="600">
             <div class="step-card reverse text-center h-100 d-flex flex-column justify-content-start position-relative">
               <div data-aos="fade-right" data-aos-delay="1100"><img class="arch-line reverse"
-                  src="assets/img/arch-line-reverse.svg" alt="FreeBootstrap.net image placeholder"></div><span
+                  src="assets/img/arch-line-reverse.avif" alt="FreeBootstrap.net image placeholder"></div><span
                 class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">2</span>
               <h3 class="fs-5 mb-4">Design</h3>
               <p>We create a structured system blueprint with built-in UI/UX and database design to ensure a
@@ -786,7 +869,7 @@
           </div>
           <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="1200">
             <div class="step-card text-center h-100 d-flex flex-column justify-content-start position-relative">
-              <div data-aos="fade-right" data-aos-delay="1700"><img class="arch-line" src="assets/img/arch-line.svg"
+              <div data-aos="fade-right" data-aos-delay="1700"><img class="arch-line" src="assets/img/arch-line.avif"
                   alt="FreeBootstrap.net image placeholder"></div><span
                 class="step-number rounded-circle text-center fw-bold mb-5 mx-auto">3</span>
               <h3 class="fs-5 mb-4">Development & Testing</h3>
@@ -1096,10 +1179,10 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
-                      aria-controls="panelsStayOpen-collapseFive"> How can we get started with Salesforce consulting? </button>
+                      data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false"
+                      aria-controls="panelsStayOpen-collapseSix"> How can we get started with Salesforce consulting? </button>
                   </h2>
-                  <div class="accordion-collapse collapse" id="panelsStayOpen-collapseFive">
+                  <div class="accordion-collapse collapse" id="panelsStayOpen-collapseSix">
                     <div class="accordion-body"> You can get started by contacting our team to discuss your business requirements and current CRM challenges. We will review your needs and recommend the most suitable Salesforce approach. From planning and implementation to ongoing support, we guide you through every stage of the process. </div>
                   </div>
                 </div>
@@ -1120,7 +1203,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <img src="assets/img/CODM-01.png" alt="codm logo">
+            <img src="assets/img/Codm_logo.avif" alt="CodM Software Logo">
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
@@ -1175,13 +1258,6 @@
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">CodM Software</strong> <span> All Rights
           Reserved.</span></p>
-      <!-- <div class="credits"> -->
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you've purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-      <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href=“https://themewagon.com>ThemeWagon
-      </div> -->
     </div>
 
   </footer>

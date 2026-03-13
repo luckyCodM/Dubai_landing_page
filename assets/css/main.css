@@ -545,6 +545,16 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Pure Counter
+--------------------------------------------------------------*/
+.counter-plus::after {
+  content: "+";
+  margin-left: 3px;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+/*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
@@ -932,11 +942,13 @@ section,
   z-index: 3;
 }
 
-.hero h2 {
+.hero h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: start;
 }
 
 .hero p {
@@ -987,14 +999,22 @@ section,
 }
 
 @media (max-width: 768px) {
-  .hero h2 {
-    font-size: 32px;
+  .hero h1 {
+    font-size: 30px;
+    text-align: center;
   }
 
   .hero p {
     font-size: 18px;
   }
 }
+ .hero-form-box {
+  background: #6a6a6a;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1946,9 +1966,3 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
