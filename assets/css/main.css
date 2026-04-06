@@ -732,7 +732,7 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-/* #preloader {
+#preloader {
   position: fixed;
   inset: 0;
   z-index: 999999;
@@ -762,7 +762,7 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-} */
+}
  
 /*--------------------------------------------------------------
 # Pure Counter
@@ -2031,35 +2031,6 @@ section,
   transform: scale(1.00);
 }
 
-/*--------------------------------------------------------------
-# Terms of Use Page Section
---------------------------------------------------------------*/
-
-/* section {
-    background: #ffffff;
-}
-
-h1 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 2.5rem;
-}
-
-h2 {
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
-p {
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-section strong {
-    font-weight: 600;
-} */
 
 
 /* Circle container */
