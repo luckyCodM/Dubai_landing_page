@@ -119,21 +119,14 @@ Example using Git:
 git clone YOUR_GITHUB_REPOSITORY_URL .
 
 ------------------------------------------------------------
-STEP 5: REMOVE UNNECESSARY FILES (PRODUCTION)
-------------------------------------------------------------
-
-rm -rf .git
-rm -f .DS_Store
-
-------------------------------------------------------------
-STEP 6: SET FILE PERMISSIONS (IMPORTANT)
+STEP 5: SET FILE PERMISSIONS (IMPORTANT)
 ------------------------------------------------------------
 
 chown -R www-data:www-data /var/www/dubai.codmsoftware.com
 chmod -R 755 /var/www/dubai.codmsoftware.com
 
 ------------------------------------------------------------
-STEP 7: CREATE NGINX CONFIGURATION
+STEP 6: CREATE NGINX CONFIGURATION
 ------------------------------------------------------------
 
 nano /etc/nginx/sites-available/dubai.codmsoftware.com
@@ -153,7 +146,7 @@ server {
 }
 
 ------------------------------------------------------------
-STEP 8: ENABLE NGINX SITE
+STEP 7: ENABLE NGINX SITE
 ------------------------------------------------------------
 
 ln -s /etc/nginx/sites-available/dubai.codmsoftware.com /etc/nginx/sites-enabled/
@@ -161,7 +154,7 @@ nginx -t
 systemctl reload nginx
 
 ------------------------------------------------------------
-STEP 9: ENABLE SSL (HTTPS)
+STEP 8: ENABLE SSL (HTTPS)
 ------------------------------------------------------------
 
 certbot --nginx -d dubai.codmsoftware.com

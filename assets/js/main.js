@@ -32,7 +32,9 @@
     mobileNavToggleBtn.classList.toggle('bi-list');
     mobileNavToggleBtn.classList.toggle('bi-x');
   }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  if (mobileNavToggleBtn) {
+    mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
+  }
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -78,13 +80,15 @@
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
     }
   }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  if (scrollTop) {
+    scrollTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
-  });
+  }
 
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
@@ -123,7 +127,7 @@
         swiperElement.querySelector(".swiper-config").innerHTML.trim()
       );
 
-      if (swiperElement.classList.contains("swiper-tab")) {
+      if (swiperElement.classList.contains("swiper-tab") && typeof initSwiperWithCustomPagination === 'function') {
         initSwiperWithCustomPagination(swiperElement, config);
       } else {
         new Swiper(swiperElement, config);
@@ -214,20 +218,32 @@
       const categories = document.querySelectorAll(".badge-category");
 
       tabs.forEach(tab => {
+        tab.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            this.click();
+          }
+        });
+
         tab.addEventListener("click", function () {
 
           // Remove active
           tabs.forEach(t => t.classList.remove("active-badge"));
+          tabs.forEach(t => t.setAttribute("aria-selected", "false"));
 
           // Add active to clicked tab
           this.classList.add("active-badge");
+          this.setAttribute("aria-selected", "true");
 
           // Hide all categories
           categories.forEach(cat => cat.classList.remove("active"));
 
           // Show target category
           const target = this.getAttribute("data-target");
-          document.getElementById(target).classList.add("active");
+          const targetCategory = document.getElementById(target);
+          if (targetCategory) {
+            targetCategory.classList.add("active");
+          }
         });
       });
 

@@ -55,6 +55,10 @@ body {
   font-family: var(--default-font);
 }
 
+img {
+  height: auto;
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
@@ -78,7 +82,8 @@ h6 {
 
 /* PHP Email Form Messages
 ------------------------------*/
-.php-email-form .error-message {
+.php-email-form .error-message,
+.salesforce-lead-form .error-message {
   display: none;
   background: #df1529;
   color: #ffffff;
@@ -88,7 +93,8 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .sent-message {
+.php-email-form .sent-message,
+.salesforce-lead-form .sent-message {
   display: none;
   color: #ffffff;
   background: #059652;
@@ -98,7 +104,8 @@ h6 {
   font-weight: 600;
 }
 
-.php-email-form .loading {
+.php-email-form .loading,
+.salesforce-lead-form .loading {
   display: none;
   background: var(--surface-color);
   text-align: center;
@@ -106,7 +113,8 @@ h6 {
   margin-bottom: 24px;
 }
 
-.php-email-form .loading:before {
+.php-email-form .loading:before,
+.salesforce-lead-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -227,6 +235,8 @@ h6 {
 
 .header .logo img {
   max-height: 55px;
+  max-width: 150px;
+  width: auto;
   margin-right: 8px;
 }
 
@@ -247,6 +257,9 @@ h6 {
   transition: 0.3s;
   text-transform: uppercase;
   border: 2px solid var(--contrast-color);
+  min-height: 40px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .header .cta-btn:hover,
@@ -566,6 +579,8 @@ h6 {
 
 .footer .footer-about .logo img {
   max-height: 55px;
+  max-width: 150px;
+  width: auto;
   margin-right: 8px;
 }
 
@@ -928,7 +943,8 @@ section,
 
 @media (max-width: 768px) {
   .section-title p {
-    font-size: 24px;
+    font-size: 13px;
+    line-height: 1.4;
   }
 }
 
@@ -1025,6 +1041,11 @@ section,
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding: 110px 0 50px;
+  }
+
   .hero h1 {
     font-size: 30px;
     text-align: center;
@@ -1032,6 +1053,16 @@ section,
 
   .hero p {
     font-size: 18px;
+    text-align: center;
+  }
+
+  .hero .d-flex.mt-4 {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .hero .btn-watch-video {
+    margin-left: 0;
   }
 }
  .hero-form-box {
@@ -1280,6 +1311,13 @@ section,
 
 .services .service-item:hover .img img {
   transform: scale(1.2);
+}
+
+@media (max-width: 575px) {
+  .services .details {
+    margin: -70px 14px 0;
+    padding: 42px 20px 28px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1870,7 +1908,8 @@ section,
   font-size: 14px;
 }
 
-.contact .php-email-form {
+.contact .php-email-form,
+.contact .salesforce-lead-form {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
   height: 100%;
@@ -1878,14 +1917,20 @@ section,
 }
 
 @media (max-width: 575px) {
-  .contact .php-email-form {
+  .contact .php-email-form,
+  .contact .salesforce-lead-form {
     padding: 20px;
   }
 }
 
 .contact .php-email-form input[type=text],
 .contact .php-email-form input[type=email],
-.contact .php-email-form textarea {
+.contact .php-email-form input[type=tel],
+.contact .php-email-form textarea,
+.contact .salesforce-lead-form input[type=text],
+.contact .salesforce-lead-form input[type=email],
+.contact .salesforce-lead-form input[type=tel],
+.contact .salesforce-lead-form textarea {
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
@@ -1897,26 +1942,39 @@ section,
 
 .contact .php-email-form input[type=text]:focus,
 .contact .php-email-form input[type=email]:focus,
-.contact .php-email-form textarea:focus {
+.contact .php-email-form input[type=tel]:focus,
+.contact .php-email-form textarea:focus,
+.contact .salesforce-lead-form input[type=text]:focus,
+.contact .salesforce-lead-form input[type=email]:focus,
+.contact .salesforce-lead-form input[type=tel]:focus,
+.contact .salesforce-lead-form textarea:focus {
   border-color: var(--accent-color);
 }
 
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
-.contact .php-email-form textarea::placeholder {
+.contact .php-email-form input[type=tel]::placeholder,
+.contact .php-email-form textarea::placeholder,
+.contact .salesforce-lead-form input[type=text]::placeholder,
+.contact .salesforce-lead-form input[type=email]::placeholder,
+.contact .salesforce-lead-form input[type=tel]::placeholder,
+.contact .salesforce-lead-form textarea::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type=submit],
+.contact .salesforce-lead-form button[type=submit] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
   padding: 10px 30px;
   transition: 0.4s;
   border-radius: 50px;
+  min-height: 44px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type=submit]:hover,
+.contact .salesforce-lead-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -2072,6 +2130,6 @@ section,
 
   .icon-img {
     width: 80%;
+    margin-top: 90px;
   }
 }
-
